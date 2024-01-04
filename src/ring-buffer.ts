@@ -42,6 +42,11 @@ export class RingBuffer<T> {
     return;
   }
 
+  clearBuffer(): void {
+    this.circularArray = [];
+    this.head = this.tail = 0;
+  }
+
   state(): void {
     console.log(this.circularArray, this.head, this.tail);
   }
